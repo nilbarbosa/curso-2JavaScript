@@ -19,7 +19,7 @@ btn.addEventListener("click",()=>{
     })
 
     cursosNaoSelecionados.map((el)=>{
-        caixa1.appendChild()
+        caixa1.appendChild(el)
     })
     //console.log(cursosSelecionados)
 })
