@@ -1,3 +1,4 @@
+
 const caixaCursos=document.querySelector("#caixaCursos")
 const btn_c=[...document.querySelectorAll(".curso")]
 const c1_c2=document.querySelector("#c1_c2")
