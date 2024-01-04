@@ -1,0 +1,22 @@
+
+
+body{
+    background: linear-gradient(to right, rgba(67, 67, 189, 0.665) ,rgba(199, 80, 215, 0.584));
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+#caixa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    background-color: rgba(197, 197, 249, 0.621);
+    border-radius: 50px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.542);
+    height: auto;
+    padding: 5px 0px 5px 5px;
+}
