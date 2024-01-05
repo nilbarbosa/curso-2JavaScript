@@ -10,6 +10,12 @@ const btn_addCarro=document.querySelector("#btn_addCarro")
 
 let a_carros=[]
 
+const removerCarro=(quem)=>{
+    a_carros=a_carros.filter((el)=>{
+        return el.nome!=quem
+    })
+}
+
 f_tipoMilitar.addEventListener("click",(evt)=>{
     f_nome.value=""
     f_municao.value=""
@@ -30,12 +36,20 @@ const gerenciarExibicaoCarros=()=>{
     carros.innerHTML=""
     a_carros.forEach((c)=>{
         const div=document.createElement("div")
+        const btn=document.createElement("button")
+        btn.addEventListener("click",(evt)=>{
+            const quemRemoer=evt.target.parentNode.dataset.nome
+            removerCarro(quemRemoer)
+            gerenciarExibicaoCarros()
+        })
+        btn.innerHTML="remover"
         div.setAttribute("class","carro")
+        div.setAttribute("data-nome",c.nome)
         div.innerHTML=`Nome: '${c.nome}' |`
         div.innerHTML+=` Portas: ${c.portas} |`
         div.innerHTML+=` Blindagem: ${c.blindagem} |`
         div.innerHTML+=` Cor: ${c.cor} `
-
+        div.appendChild(btn)
         carros.appendChild(div)
     })
 }

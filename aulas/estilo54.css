@@ -39,7 +39,9 @@ body{
 }
 
 .carro{
-
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     padding: 5px;
     border-radius: 5px;
     display: flex;
