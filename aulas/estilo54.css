@@ -1,0 +1,73 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+body{
+    background: linear-gradient(to right, rgba(66, 66, 184, 0.665) ,rgba(199, 93, 213, 0.584));
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    padding: 20px;
+}
+
+.criarCarro{
+    background-color: rgba(0, 0, 0, 0.306);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 430px;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.396);
+}
+
+.carros{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 87%;
+    width: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.575);
+    padding: 5px;
+    border-radius: 15px;
+    max-width: 340px;
+}
+
+.carro{
+
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    width: 200px; 
+}
+
+.campoform{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.campoform input{
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.campoform button{
+    background-color: #f56666cc;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.campoform button:hover{
+    background-color: #fc6666;
+}
