@@ -7,6 +7,9 @@ const teclaLimpar=document.getElementById("tLimpar")
 const teclaIgual=document.getElementById("tIgal")
 const tCpy=document.getElementById("tCpy")
 const teste=document.getElementById("teste")
+const calc_aba=document.getElementById("calc_aba")
+const calc=document.getElementById("calc")
+const img_aba_calc=document.getElementById("img_aba_calc")
 
 
 
@@ -67,4 +70,13 @@ tCpy.addEventListener("click",()=>{
     /* teste.select()
     teste.setSelectionRange(0,9999999999) //mobile
     navigator.clipboard.writeText(teste.value) */
+})
+
+calc_aba.addEventListener("click",()=>{
+   calc.classList.toggle("calc_exibir")
+   if(calc.classList.contains("calc_exibir")){
+    img_aba_calc.setAttribute("src","arrow_left.svg")
+   } else{
+    img_aba_calc.setAttribute("src","arrow_right.svg")
+   }
 })
