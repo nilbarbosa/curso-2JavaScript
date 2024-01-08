@@ -1,3 +1,4 @@
+
 const numero = document.getElementById("numero")
 const btn_promessa = document.getElementById("btn_promessa")
 
