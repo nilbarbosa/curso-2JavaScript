@@ -1,0 +1,67 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right, rgba(50, 50, 204, 0.665) ,rgba(199, 80, 215, 0.584));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 5px;
+    padding: 5px;
+    width: 300px;
+}
+
+#campo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type=text]{
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button{
+    background-color: #000000;
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#listaContatos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin: 5px;
+    width: calc(100% - 10px);
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
