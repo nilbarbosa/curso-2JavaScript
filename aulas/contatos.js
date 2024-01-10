@@ -8,18 +8,29 @@ let contato={
         return contatos[i_cont]
     },
     addContato:function(novoContato,destinoDOM){
-        const div=document.createElement("div")
-        div.setAttribute("class","contato")
-        const p_nome=document.createElement("p")
-        p_nome.innerHTML=novoContato.nome
-        const p_telefone=document.createElement("p")
-        p_telefone.innerHTML=novoContato.telefone
-        const p_email=document.createElement("p")
-        p_email.innerHTML=novoContato.email
-        div.appendChild(p_nome)
-        div.appendChild(p_telefone)
-        div.appendChild(p_email)
-        destinoDOM.appendChild(div)
+        const cont={
+            nome:novoContato.nome,
+            telefone:novoContato.telefone,
+             email:novoContato.email
+            }
+        contatos.push(cont)
+
+        contatos.forEach((c)=>{
+            destinoDOM.innerHTML=null
+
+            const div=document.createElement("div")
+            div.setAttribute("class","contato")
+            const p_nome=document.createElement("p")
+            p_nome.innerHTML=c.nome
+            const p_telefone=document.createElement("p")
+            p_telefone.innerHTML=c.telefone
+            const p_email=document.createElement("p")
+            p_email.innerHTML=c.email
+            div.appendChild(p_nome)
+            div.appendChild(p_telefone)
+            div.appendChild(p_email)
+            destinoDOM.appendChild(div)
+        })
     }
 }
 
