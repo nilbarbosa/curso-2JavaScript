@@ -7,8 +7,24 @@
     <title>Cronômetro em JS</title>
 </head>
 <body>
-    <h1>Cronômetro</h1>
-    <p id="timer">00:00:00</p>
+    <div id="main" class="main">
+        <div id="divtimer">
+            <h1>Cronômetro</h1>
+            <p id="timer">00:00:00</p>
+            <div id="botoes">
+                <button id="btn_iniciar" class="btn">Iniciar</button>
+                <button id="btn_parcial" class="btn">Parcial</button>
+                <button id="btn_parar" class="btn">Parar</button>
+                <button id="btn_zerar" class="btn">Zerar</button>
+            </div>
+        </div>
+        <div id="parciais" class="parciais">
+            <h2>Parcias</h2>
+            <div id="parciaisRegistradas" class="parciaisRegistradas">
+
+            </div>
+        </div>
+    </div>
     <script src="aula104.js"></script>
 </body>
 </html>
