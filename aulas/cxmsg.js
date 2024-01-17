@@ -1,14 +1,16 @@
 class Cxmsg{
-    static cor="#888"
-    static destino=null
-    static divmsg=null
+    titulo=null
+    texto=null
+    cor=null
+    destino=null
+    divmsg=null
 
-    static config=(config)=>{
+    constructor(config){
         this.cor=config.cor
+        this.destino=document.body
     }
 
-    static mostar=(titulo,texto)=>{
-        this.destino=document.body
+    mostar=(titulo,texto)=>{
         this.titulo=titulo
         this.texto=texto
         this.divmsg=document.createElement("div")
@@ -103,8 +105,7 @@ class Cxmsg{
             this.ocultar()
         })
     }
-    static ocultar=()=>{
+    ocultar=()=>{
         this.divmsg.remove()
     }
 }
-export {Cxmsg}
