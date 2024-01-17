@@ -1,3 +1,5 @@
+import {Cxmsg} from "./cxmsg.js"
+
 const timer=document.getElementById("timer")
 const btn_iniciar=document.getElementById("btn_iniciar")
 const btn_parar=document.getElementById("btn_parar")
@@ -45,4 +47,5 @@ btn_zerar.addEventListener("click",(evt)=>{
     timer.innerHTML="00:00:00"
     clearInterval(intervalo)
     parciaisRegistradas.innerHTML=""
+    Cxmsg.mostrar("Cronômetro","O cronômetro foi zerado.")
 })
