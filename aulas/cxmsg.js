@@ -2,12 +2,16 @@ class Cxmsg{
     static cor="#888"
     static destino=null
     static divmsg=null
+    static tipo=null
+    static comando_sn=null
+    static textos=[]
 
-    static config=(config)=>{
+
+    static mostar=(config,titulo,texto)=>{
         this.cor=config.cor
-    }
-
-    static mostar=(titulo,texto)=>{
+        this.tipo=config.tipo
+        this.textos=config.textos
+        this.comando_sn=()=>{config.comando_sn()}
         this.destino=document.body
         this.titulo=titulo
         this.texto=texto
@@ -93,15 +97,33 @@ class Cxmsg{
             "border-radius: 5px;"+
             "cursor: pointer;"+
             "text-transform: uppercase;"
+        if(this.tipo=="ok"){
+            const btn_ok=document.createElement("button")
+            btn_ok.setAttribute("style",estilo_botao)
+            btn_ok.innerHTML="OK"
+            btn_ok.addEventListener("click",(evt)=>{
+                this.ocultar()
+            })
+            rodape_Cxmsg.appendChild(btn_ok)
+        } else if(this.tipo=="sn"){
+            const btn_sim=document.createElement("button")
+            btn_sim.setAttribute("style",estilo_botao)
+            btn_sim.innerHTML=this.textos[0]
+            btn_sim.addEventListener("click",(evt)=>{
+                this.comando_sn()
+                this.ocultar()
+            })
+            rodape_Cxmsg.appendChild(btn_sim)
 
-        const btn_ok=document.createElement("button")
-        btn_ok.setAttribute("style",estilo_botao)
-        btn_ok.innerHTML="OK"
-        rodape_Cxmsg.appendChild(btn_ok)
-
-        btn_ok.addEventListener("click",(evt)=>{
-            this.ocultar()
-        })
+            const btn_nao=document.createElement("button")
+            btn_nao.setAttribute("style",estilo_botao)
+            btn_nao.innerHTML=this.textos[1]
+            btn_nao.addEventListener("click",(evt)=>{
+                this.ocultar()
+            }) 
+            rodape_Cxmsg.appendChild(btn_nao)   
+        }
+        
     }
     static ocultar=()=>{
         this.divmsg.remove()
