@@ -40,6 +40,19 @@
     flex-direction: row;
 }
 
+.dgvLinha:hover{
+    background-color: rgba(17, 51, 136, 0.754) !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.dgvLinha:nth-child(odd){
+    background-color: #aaa;
+}
+.dgvLinha:nth-child(even){
+    background-color: #ddd;
+}
+
 .c1{
     width: 50px;
 }
